@@ -154,3 +154,13 @@ need is measurable would teach the wrong lesson.
   necessary.
 - **Only 114 items carry English glosses.** The rest are drilled on article (nouns)
   or principal parts (verbs) without translating a word of English.
+
+## License
+
+[MIT](LICENSE).
+
+That covers the code in this repository. It does not and cannot cover what the
+ingest pipeline reads: the Goethe-Institut Wortliste and Modellsätze, and the
+course video the clips are cut from, remain under their own terms. None of that
+material is distributed here — `data/` is empty by design, and anyone rebuilding
+the database supplies their own copies.
