@@ -1,0 +1,32 @@
+# Secrets. The DeepSeek keys live in .env; .env.example is the checked-in shape.
+.env
+
+# Derived state. `event` is the source of truth and the DB is rebuilt from it,
+# so shipping a 37 MB binary that goes stale on the next session is worse than
+# useless — it invites someone to commit a conflicting copy.
+data/jana.db
+data/jana.db-wal
+data/jana.db-shm
+data/archive/
+
+# The corpus and everything cut out of it. 110 GB of purchased course video and
+# Goethe exam material is not ours to redistribute, and the 188 MB of clips are
+# reproducible from it with `python -m jana.ingest.clips`.
+data/raw/*
+!data/raw/.gitkeep
+data/clips/
+data/work/
+
+# Build output. `npm run build` in web/ regenerates it.
+jana/static/app/
+web/node_modules/
+web/dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# macOS
+.DS_Store

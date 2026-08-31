@@ -1,0 +1,29 @@
+[project]
+name = "jana"
+version = "0.1.0"
+description = "German instructor targeting Goethe-Zertifikat B1, 2027-01-07"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.141.1",
+    "numpy>=2.5.2",
+    "uvicorn[standard]>=0.52.4",
+]
+
+[project.scripts]
+jana = "jana.session:main"
+jana-web = "jana.web:main"
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["jana"]

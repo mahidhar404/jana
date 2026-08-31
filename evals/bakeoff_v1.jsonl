@@ -1,0 +1,2 @@
+{"model": "gemma4:12b-mlx", "tier": "local", "n": 10, "in_syllabus": 10, "pass_rate": 1.0, "p50_ms": 487, "failures": [], "wall_s": 6.8, "at": 1787941615.955449}
+{"model": "deepseek-chat", "tier": "remote", "n": 20, "in_syllabus": 20, "pass_rate": 1.0, "p50_ms": 852, "failures": [], "wall_s": 17.2, "at": 1787941638.040832}
